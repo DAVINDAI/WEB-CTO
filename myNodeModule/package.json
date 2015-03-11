@@ -1,0 +1,8 @@
+{
+    "name": "davinmymodule",
+    "version": "0.0.1",
+    "bin": {
+       "davinmodule": "./test"
+    },
+    "private": false
+}

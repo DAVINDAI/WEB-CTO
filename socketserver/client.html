@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    var  wsServer = 'ws://localhost:8124';
+    var  websocket = new WebSocket(wsServer);
+
+    websocket.onmessage = function (evt) { onMessage(evt) };
+    websocket.onerror = function (evt) { onError(evt) };
+
+    function onMessage(evt) {
+        console.log('Retrieved data from server: ' + evt.data);
+    }
+    function onError(evt) {
+        console.log('Error occured: ' + evt.data);
+    }
+</script>
+</body>
+</html>
